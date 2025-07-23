@@ -9,11 +9,11 @@ import { Search, ShoppingCart, UserRound, Menu, ChevronDown } from "lucide-react
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <header className="w-full h-auto xl:h-[150px] bg-[#18181c]">
-            <div className="w-full h-1/2 hidden xl:block">
+        <header className="w-full flex relative z-10 h-auto xl:h-[150px] bg-[#18181c]">
+            <div className="absolute w-full h-1/2 hidden xl:block">
                 <div className="w-full h-full border-1 border-t-0 border-l-0 border-r-0 border-b-gray-500/30 flex flex-row items-center justify-between pt-[7px] pb-[5p7] pl-30 pr-30">
                     <Image src={jetbrainslogo} alt={"jetbrainslogo"} width={170}/>
-                    <ul className="flex flex-row gap-x-6 text-xl  text-zinc-400 items-center">
+                    <ul className="flex flex-row gap-x-6 text-md  text-zinc-400 items-center">
                         <li><Link href={"/"} className="hover:text-white">AI</Link></li>
                         <li><Link href={"/"} className="hover:text-white transition-all duration-200">Developers Tools</Link></li>
                         <li><Link href={"/"} className="hover:text-white transition-all duration-200">Team Tools</Link></li>
@@ -50,8 +50,8 @@ const Header = () => {
                         <Menu className="w-[17px]"/>
                     </div>
                 </div>
-                <div className="w-full h-auto p-5 max-h-1/3 flex flex-row justify-between">
-                    <ul className="flex flex-row gap-x-3 items-center justify-between w-full">
+                <div className="w-full h-auto bg-[#18181c] p-5 max-h-1/3 flex flex-row justify-between">
+                    <ul className="flex flex-row gap-x-3  justify-between w-full">
                         <h1 className="text-gray-400 flex gap-x-3">Overview <ChevronDown /></h1>
                         <li><Link href={"/"} className="text-white pt-[10px] pb-[10px] pl-[20px] pr-[20px] bg-blue-600 rounded-full hover:bg-blue-700 transition-all duration-200">Pricing</Link></li>
                     </ul>
